@@ -1,0 +1,15 @@
+pipeline {
+    agent any 
+    stages {
+        stage('Maven Version ') { 
+            steps {
+                bat 'mvn -v'
+            }
+        }
+        stage('Running Test') { 
+            steps {
+                bat 'mvn clean test'
+            }
+        }
+       }
+}
